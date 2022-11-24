@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    color: rgb(0, 0, 0);
+    text-shadow: 0.8rem 0.5rem 1rem #fff;
+    ;
+}
+
+body {
+    background: #3a3a3a;
+    transition: 5s;
+}
+
+.colors {
+    position: absolute;
+    right: 0;
+    width: 75px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 3px solid #333;
+}
+
+.colors span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: var(--clr);
+    margin: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.colors span.active {
+    border: 3px solid #333;
+}
+
+.colors span::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: var(--clr);
+    rotate: 45deg;
+    translate: -36px;
+    opacity: 0;
+    transition: 0.5s;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+}
+
+.colors span.active::before {
+    opacity: 1;
+}
+
+h2 {
+    text-align: center;
+    text-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    line-height: 1.25em;
+}
+
+#btnPlay {
+    position: relative;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+#btnIniciar {
+    position: relative;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+#btnPlay:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#btnIniciar:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#btnJogar,
+#nome {
+    width: 66vh;
+    box-shadow: 2px 2px 7px 1px #7c7c7c;
+}
+
+#btnJogar,
+#nome,
+.imgtelainicial,
+.imgtelajogo,
+.imgtelajogoopen {
+    box-shadow: 2px 2px 7px 1px #7c7c7c;
+}
+
+#nome,
+.alignflextext,
+.styleform {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.imgtelainicial {
+    height: 29vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh;
+}
+
+.imgtelajogo {
+    top: 100%;
+    position: relative;
+    height: 28vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh;
+    transition: all .3s step-start;
+}
+
+.imgtelajogoopen {
+    top: 0;
+    position: relative;
+    height: 28vh;
+    padding: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh;
+    transition: all .3s step-end;
+}
+
+.alignflextext,
+.button {
+    transition: 0.5s;
+}
+
+#telaInicial {
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+}
+
+#nome {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+}
+
+.styleiniciar {
+    display: flex;
+    justify-content: center;
+}
+
+.styleform {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.alignflextext {
+    justify-content: space-around;
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 0.1rem;
+    height: 3rem;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.alignflextextvoltar {
+    text-align: center;
+    color: rgb(236, 144, 6);
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    border-radius: 0.1rem;
+    letter-spacing: 3px;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.alignflex {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 6rem;
+}
+
+.button,
+.modal {
+    height: 3rem;
+    padding: 0 4rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 0.2rem 0 0 #444;
+    letter-spacing: 3px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.box {
+    overflow: hidden;
+}
+
+.button:active {
+    transform: translateY(2rem);
+    box-shadow: 0 0.2rem 0 0 #3b3b3b;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.boxUser {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 4rem;
+    border-radius: 0.1rem;
+    height: 3rem;
+    letter-spacing: 3px;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.headerfooter {
+    transition: 0.5s;
+    padding: 1rem;
+    border-style: hidden;
+    margin: 0 auto;
+}
+
+a {
+    position: relative;
+    background: #fff;
+    color: #fff;
+    font-size: 0.5em;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+
+span {
+    position: relative;
+    z-index: 1;
+}
+
+i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+i::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 2px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+i::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #27282c;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::after {
+    width: 20px;
+    left: 80%;
+}
